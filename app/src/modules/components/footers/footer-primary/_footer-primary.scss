@@ -1,0 +1,36 @@
+/**
+ * @group css.modules.components.footers.footer-primary
+ *
+ * Use this for footer-primary styles that apply to all pages
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "../../modules/components/footer/footer-primary/footer-primary";
+ *
+ */
+
+ .footer-primary {
+    background: #333;
+    padding: 20px 0 0;
+    color: #fff;
+
+    @include mq($from: smalldesktop) {
+        padding: 40px 0 0;
+    }
+ }
+
+    .footer-primary__bottom {
+        width: 100%;
+        text-align: right;
+        padding: 5px 0;
+
+        p {
+            @include font(9, 13);
+
+            @include mq($from: tablet) {
+                @include font(10, 14);
+            }
+        }
+    }

@@ -1,0 +1,111 @@
+/**
+ * @group css.base.fonts
+ *
+ * Here we define the font styles
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "__base/_fonts.scss";
+ *
+ */
+
+/**
+ * @group css.base.fonts
+ * @param {string} $font-primary
+ */
+$font-primary: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+
+/**
+ * The globally used html styles are declared here
+ */
+html {
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/**
+ * The globally used font styles are declared here
+ */
+body {
+	font-family: $font-primary;
+    font-weight: 300;
+    color: #444;
+}
+
+/**
+ * h1 styles
+ */
+h1 {
+	@include font(34, 38, $font-primary);
+    font-weight: 300;
+}
+
+h2,
+h3 {
+    @include font(22, 26, $font-primary);
+    font-weight: 300;
+    margin-bottom: 20px;
+
+    @include mq($from: tablet) {
+        @include font(24, 28);
+        margin-bottom: 25px;
+    }
+
+    @include mq($from: smalldesktop) {
+        @include font(26, 30);
+        margin-bottom: 30px;
+    }
+}
+
+p,
+li {
+	@include font(14, 18, $font-primary);
+
+    @include mq($from: tablet) {
+        @include font(15, 19);
+    }
+
+    @include mq($from: smalldesktop) {
+        @include font(16, 20);
+    }
+}
+
+a {
+	@include font(14, 18, $font-primary);
+    transition: background 0.3s ease-out, color 0.3s ease-out;
+    text-decoration: none;
+    color: $color-blue;
+}
+
+// Font Animations
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+span {
+    transition: font 0.3s ease;
+}
+
+// Better font rendering
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+span,
+input,
+label,
+time,
+button,
+address {
+    @include anti-alias-text;
+}

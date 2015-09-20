@@ -1,0 +1,69 @@
+/**
+ * @group css.modules.components.video-hero.video-hero
+ *
+ * Use this for video-hero styles that apply to all pages
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "../../modules/components/video-hero/video-hero";
+ *
+ */
+
+.video-hero {
+    overflow: hidden;
+
+    video {
+        width: 100%;
+    }
+}
+    .video-hero__inner {
+        height: 100vh;
+    }
+
+    .video-hero__content {
+        @include z-index(video-hero__content);
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        margin: auto;
+        left: 0;
+        right: 0;
+        transition: transform 0.5s ease-in-out;
+        transform: translate(0, 0);
+        transform: translate3d(0, 0, 0);
+
+        &.video-hero__content--waiting {
+            transform: translate(0, 150px);
+            transform: translate3d(0, 150px, 0);
+        }
+
+        a {
+            @include font(14, 18);
+            font-weight: bold;
+            background: $color-red;
+            display: inline-block;
+            color: #fff;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            user-select: none;
+            border: 2px solid #fff;
+
+            &:hover {
+                .no-touch & {
+                    background: darken($color-red, 10%);
+                }
+            }
+        }
+
+        svg {
+            animation: up-and-down 3s ease-out infinite;
+            display: block;
+            fill: #fff;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+        }
+    }

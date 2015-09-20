@@ -1,0 +1,49 @@
+/**
+ * @group css.modules.components.headers.header-primary.header-primary
+ *
+ * Use this for header-primary styles that apply to all pages
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "../../modules/components/headers/header-primary/header-primary";
+ *
+ */
+
+.header-primary {
+    @include z-index(header-primary);
+    background: rgba(0,0,0, 0.4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    height: 100px;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out, background 0.3s cubic-bezier(0.68, 0, 0.38, 1);
+    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
+
+    &.header-primary--waiting {
+        transform: translate(0, -100px);
+        transform: translate3d(0, -100px, 0);
+    }
+
+    .header-primary--sticky & {
+        background: #fff;
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+        border-bottom: 0;
+    }
+}
+    .header-primary__logo {
+        display: block;
+        width: 78px;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+
+        img {
+            border-radius: 50%;
+        }
+    }

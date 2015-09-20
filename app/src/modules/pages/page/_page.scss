@@ -1,0 +1,26 @@
+/**
+ * @group css.modules.pages.page.page
+ *
+ * Shared styles across all pages
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "../../modules/pages/page/page";
+ *
+ */
+
+.page {
+    > section {
+        padding: 20px 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        @include mq($from: smalldesktop) {
+            padding: 40px 0;
+        }
+    }
+}
