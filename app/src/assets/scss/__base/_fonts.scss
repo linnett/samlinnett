@@ -78,6 +78,16 @@ a {
     transition: background 0.3s ease-out, color 0.3s ease-out;
     text-decoration: none;
     color: $color-blue;
+
+    svg {
+        transition: fill 0.3s ease-out;
+    }
+
+    &:hover {
+        .no-touch & {
+            color: $color-red;
+        }
+    }
 }
 
 // Font Animations

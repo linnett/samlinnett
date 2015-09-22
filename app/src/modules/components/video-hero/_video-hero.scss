@@ -16,10 +16,27 @@
 
     video {
         width: 100%;
+
+        .touch & {
+            display: none;
+        }
     }
 }
     .video-hero__inner {
         height: 100vh;
+
+        // Mobile device background image fallback
+        .touch & {
+            background-image: url('../img/heros/sunset.jpg');
+            background-size: cover;
+            background-position: center center;
+
+            &.tint-overlay {
+                &::before {
+                    background: rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
     }
 
     .video-hero__content {
@@ -37,6 +54,11 @@
         &.video-hero__content--waiting {
             transform: translate(0, 150px);
             transform: translate3d(0, 150px, 0);
+
+            .touch & {
+                transform: translate(0, 0);
+                transform: translate3d(0, 0, 0);
+            }
         }
 
         a {
@@ -54,6 +76,7 @@
             &:hover {
                 .no-touch & {
                     background: darken($color-red, 10%);
+                    color: #fff;
                 }
             }
         }

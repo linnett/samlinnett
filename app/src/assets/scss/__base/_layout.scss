@@ -40,7 +40,7 @@ $mq-breakpoints: (
 
 @include rg-create-grid(
     $grid-class: "grid",
-    $width: 1280px,
+    $width: 1024px,
     $gutter: 32px,
     $margin: 16px,
     $columns: 12,

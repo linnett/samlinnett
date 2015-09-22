@@ -15,11 +15,73 @@
     background: #333;
     padding: 20px 0 0;
     color: #fff;
-
-    @include mq($from: smalldesktop) {
-        padding: 40px 0 0;
-    }
  }
+    .footer-primary__main {
+        margin-bottom: 20px;
+    }
+
+        .footer-primary__contact {
+            text-align: center;
+
+            @include mq($from: smalldesktop) {
+                float: right;
+            }
+
+            h3 {
+                @include font(16, 20);
+                margin-bottom: 20px;
+
+                @include mq($from: smalldesktop) {
+                    display: inline-block;
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }
+            }
+
+            a {
+                background: #fff;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 10px;
+                border-radius: 50%;
+                margin: 0 4px;
+                width: 40px;
+                height: 40px;
+
+                &:hover {
+                    .no-touch & {
+                        &.social-email {
+                            svg {
+                                fill: $color-red;
+                            }
+                        }
+                        &.social-github {
+                            svg {
+                                fill: $color-red;
+                            }
+                        }
+                        &.social-linkedin {
+                            svg {
+                                fill: $color-social-linkedin;
+                            }
+                        }
+                        &.social-twitter {
+                            svg {
+                                fill: $color-social-twitter;
+                            }
+                        }
+                    }
+                }
+            }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    fill: #444;
+                }
+        }
 
     .footer-primary__bottom {
         width: 100%;

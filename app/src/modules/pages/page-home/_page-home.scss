@@ -172,7 +172,7 @@
                     margin: 0 auto;
 
                     &.company-img--small {
-                        max-width: 60px;
+                        max-width: 50px;
 
                         @include mq($from: tablet) {
                             max-width: 80px;

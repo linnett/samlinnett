@@ -18,15 +18,19 @@
     top: 0;
     width: 100%;
     border-bottom: 1px solid #333;
-    height: 100px;
     padding: 10px;
     transition: transform 0.5s ease-in-out, background 0.3s cubic-bezier(0.68, 0, 0.38, 1);
     transform: translate(0, 0);
     transform: translate3d(0, 0, 0);
 
     &.header-primary--waiting {
-        transform: translate(0, -100px);
-        transform: translate3d(0, -100px, 0);
+        transform: translate(0, -110px);
+        transform: translate3d(0, -110px, 0);
+
+        .touch & {
+            transform: translate(0, 0);
+            transform: translate3d(0, 0, 0);
+        }
     }
 
     .header-primary--sticky & {
@@ -35,15 +39,3 @@
         border-bottom: 0;
     }
 }
-    .header-primary__logo {
-        display: block;
-        width: 78px;
-        position: absolute;
-        margin: auto;
-        left: 0;
-        right: 0;
-
-        img {
-            border-radius: 50%;
-        }
-    }

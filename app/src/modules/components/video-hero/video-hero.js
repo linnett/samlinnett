@@ -20,12 +20,15 @@ class videoHero {
             $videoWrap: $('.js-video-wrap'),
             $videoOuterWrap: $('.js-video-outer'),
             $videoHeroContent: $('.video-hero__content'),
-            $window: $(window)
+            $window: $(window),
+            $html: $('html')
         };
 
         this.options = $.extend(this.defaults, options);
 
-        if(this.options.$video.length) {
+        // Ensure that the video hero exists and ensure it is not a
+        // touch (mobile) device
+        if(this.options.$video.length && this.options.$html.hasClass('no-touch')) {
             this.setAnimations();
             this.runBackgroundVideo();
         }

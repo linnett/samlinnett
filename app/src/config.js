@@ -17,9 +17,10 @@ System.config({
   "map": {
     "babel": "npm:babel-core@5.4.7",
     "babel-runtime": "npm:babel-runtime@5.4.7",
+    "backgroundVideo": "github:linnett/backgroundVideo@master",
     "core-js": "npm:core-js@0.9.14",
     "jquery": "github:components/jquery@2.1.3",
-    "backgroundVideo": "github:linnett/backgroundVideo@master",
+    "linnett/backgroundVideo": "github:linnett/backgroundVideo@master",
     "main.config": "modules/main.config",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
