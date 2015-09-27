@@ -9,7 +9,7 @@ gulp.task('production', ['clean'], function(cb) {
 
   global.isProd = true;
 
-  runSequence('styles', 'images', 'svg', 'fonts', 'scripts-inline', 'docs', 'systemjsBuilder', 'inject', cb);
+  runSequence('styles', 'images', 'svg', 'fonts', 'scripts-inline', 'systemjsBuilder', 'inject', cb);
 
 });
 

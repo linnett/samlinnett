@@ -1,7 +1,8 @@
+{% include "../../components/headers/header-primary/header-primary.html" with {'header_class': 'header-primary--waiting header-primary--transparent' } %}
 <main class="page page-home">
 	{% include '../../components/video-hero/video-hero.html' %}
 
-    <section class="page-home__intro">
+    <section class="page-home__intro section--trans">
         <div class="grid no-cols">
             <h1>I am <span class="color-text--red">Sam Linnett</span></h1>
             <h2>A freelance Web Developer, based in central London</h2>
@@ -32,17 +33,11 @@
         </div>
     </section>
 
-    <!-- <section class="page-home__about">
-        <div class="grid no-cols">
-            <p>I build websites on the front-end using: <span class="color-text--red js-type-word">HTML</span></p>
-        </div>
-    </section> -->
-
-    <section class="page-home__skills">
+    <section class="page-home__skills section--trans">
         <div class="grid no-cols">
             <h2>Skill summary</h2>
             <p>
-                JavaScript - ES6/ES2015, jQuery, Require, Angular, Gulp, Grunt, MVC, AJAX.
+                JavaScript - ES6/ES2015, jQuery, Require, Angular, Browserify, Gulp, Grunt, MVC, AJAX.
                 HTML - accessibility, semantic.
                 CSS - Sass, mobile-first, fully responsive, UI development.
                 PHP, MySQL, Apache2, OOP, UX, JSON, Git, API integration (RESTful), cloud server configuration (AWS/Rackspace), CMS development, Agile.
@@ -50,7 +45,7 @@
         </div>
     </section>
 
-    <section class="page-home__companies">
+    <section class="page-home__companies section--trans">
         <div class="grid no-cols">
             <h2>I've worked on projects for:</h2>
             <div class="page-home__companies__inner">
@@ -73,7 +68,7 @@
                     <img src="assets/img/logos/lebara.jpg" alt="Lebara" />
                 </div>
                 <div class="company">
-                    <img src="assets/img/logos/Novartis.jpg" alt="Novartis" />
+                    <img src="assets/img/logos/novartis.jpg" alt="Novartis" />
                 </div>
                 <div class="company">
                     <img src="assets/img/logos/sainsburys.jpg" alt="Sainsburys" />
@@ -85,7 +80,4 @@
         </div>
     </section>
 
-    <section class="twitter-feed">
-
-    </section>
 </main>

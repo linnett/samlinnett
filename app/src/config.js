@@ -20,8 +20,8 @@ System.config({
     "backgroundVideo": "github:linnett/backgroundVideo@master",
     "core-js": "npm:core-js@0.9.14",
     "jquery": "github:components/jquery@2.1.3",
-    "linnett/backgroundVideo": "github:linnett/backgroundVideo@master",
     "main.config": "modules/main.config",
+    "scrollMonitor": "github:sakabako/scrollMonitor@1.0.12",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
     },

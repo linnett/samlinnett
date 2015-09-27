@@ -42,7 +42,7 @@ class videoHero {
     setAnimations() {
         setTimeout(() => {
             this.options.$videoHeroContent.removeClass('video-hero__content--waiting');
-        }, 2500);
+        }, 1000);
     }
 
     /**

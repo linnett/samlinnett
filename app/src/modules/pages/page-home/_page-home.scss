@@ -12,7 +12,25 @@
  */
 
 .page-home {
+    > section.section--trans {
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        opacity: 0;
+        transform: translate(0, 50px);
+        transform: translate3d(0, 50px, 0);
 
+        &.active {
+            transform: translate(0, 0);
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+
+        .touch &,
+        .lt-ie10 & {
+            transform: translate(0, 0);
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
 }
     .page-home__intro {
         text-align: center;
@@ -110,22 +128,6 @@
                 }
             }
         }
-
-    .page-home__about {
-        text-align: center;
-
-        p {
-            @include font(18, 22);
-
-            @include mq($from: tablet) {
-               @include font(24, 28);
-            }
-
-            @include mq($from: smalldesktop) {
-                @include font(30, 34);
-            }
-        }
-    }
 
     .page-home__skills {
         p {

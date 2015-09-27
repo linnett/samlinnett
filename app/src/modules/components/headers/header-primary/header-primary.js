@@ -33,7 +33,7 @@ class headerPrimary {
     setAnimations() {
         setTimeout(() => {
             this.options.$headerPrimary.removeClass('header-primary--waiting');
-        }, 2000);
+        }, 800);
     }
 
     /**

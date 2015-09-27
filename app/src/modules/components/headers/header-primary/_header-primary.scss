@@ -13,8 +13,8 @@
 
 .header-primary {
     @include z-index(header-primary);
-    background: rgba(0,0,0, 0.4);
-    position: fixed;
+    background: #fff;
+    position: relative;
     top: 0;
     width: 100%;
     border-bottom: 1px solid #333;
@@ -31,6 +31,11 @@
             transform: translate(0, 0);
             transform: translate3d(0, 0, 0);
         }
+    }
+
+    &.header-primary--transparent {
+        position: fixed;
+        background: rgba(0,0,0, 0.4);
     }
 
     .header-primary--sticky & {

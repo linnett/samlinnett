@@ -1,0 +1,30 @@
+/**
+ * @group css.modules.pages.page-about
+ *
+ * Use this for About page styles that apply to all pages
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "../../modules/pages/page-about/page-about
+ *
+ */
+
+.page-about {
+
+}
+    .page-about__about {
+        h2 {
+            @include font(28, 32);
+            text-align: center;
+
+            @include mq($from: tablet) {
+                @include font(32, 36);
+            }
+
+            @include mq($from: smalldesktop) {
+                @include font(40, 44);
+            }
+        }
+    }

@@ -34,8 +34,12 @@
         }
             a {
                 @include font(16, 20);
-                color: #fff;
+                color: #444;
                 font-weight: 400;
+
+                .header-primary--transparent & {
+                    color: #fff;
+                }
 
                 .header-primary--sticky & {
                     color: #444;

@@ -1,8 +1,8 @@
 {
-  "name": "Gulp-SASS-JSPM-AngularJS",
+  "name": "SamLinnett.com",
   "version": "0.0.1",
-  "author": "David Plunkett",
-  "description": "Boilerplate using GULP, SASS, JSPM and AngularJS whilst also utilizing best practices.",
+  "author": "Sam Linnet",
+  "description": "SamLinnett.com project package file",
   "keywords": [
     "gulp",
     "sass",
@@ -76,8 +76,9 @@
       "lib": "."
     },
     "dependencies": {
+      "backgroundVideo": "github:linnett/backgroundVideo@master",
       "jquery": "github:components/jquery@^2.1.4",
-      "linnett/backgroundVideo": "github:linnett/backgroundVideo@master"
+      "scrollMonitor": "github:sakabako/scrollMonitor@^1.0.12"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",
