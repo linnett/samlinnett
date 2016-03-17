@@ -62,23 +62,7 @@
         }
 
         a {
-            @include font(14, 18);
-            font-weight: bold;
-            background: $color-red;
-            display: inline-block;
-            color: #fff;
-            padding: 10px 20px;
             margin-bottom: 20px;
-            text-transform: uppercase;
-            user-select: none;
-            border: 2px solid #fff;
-
-            &:hover {
-                .no-touch & {
-                    background: darken($color-red, 10%);
-                    color: #fff;
-                }
-            }
         }
 
         svg {

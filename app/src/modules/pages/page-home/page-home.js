@@ -36,6 +36,7 @@ class pageHome {
         this.intro = scrollMonitor.create(document.querySelector('.page-home__intro'), -200);
         this.skills = scrollMonitor.create(document.querySelector('.page-home__skills'), -200);
         this.companies = scrollMonitor.create(document.querySelector('.page-home__companies'), -200);
+        this.portfolio = scrollMonitor.create(document.querySelector('.portfolio'), -200);
     }
 
     /**
@@ -52,6 +53,9 @@ class pageHome {
         });
         this.companies.enterViewport(() => {
             $('.page-home__companies').addClass('active');
+        });
+        this.portfolio.enterViewport(() => {
+            $('.portfolio').addClass('active');
         });
     }
 }

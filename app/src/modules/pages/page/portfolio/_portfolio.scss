@@ -1,0 +1,74 @@
+/**
+ * @group css.modules.pages.page.portfolio.portfolio
+ *
+ * Use this for all portfolio section styles
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "../../modules/pages/page/portfolio/portfolio";
+ *
+ */
+
+.portfolio {
+    background: #f5f5f5;
+}
+    .portfolio__block {
+        @extend .cf;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E6E6E6;
+        text-align: center;
+
+        @include mq($from: tablet) {
+            text-align: left;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        @include mq($from: tablet) {
+            margin-bottom: 30px;
+            border-bottom: 0;
+        }
+
+        @include mq($from: smalldesktop) {
+            margin-bottom: 40px;
+        }
+    }
+
+        .portfolio__image-wrap {
+            @include mq($until: tablet) {
+                &.col-8-12 {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        .portfolio__content-wrap {
+            ul {
+                list-style-position: inside;
+                margin-bottom: 20px;
+
+                @include mq($until: tablet) {
+                    margin-left: -1em;
+                }
+            }
+
+                li {
+                    color: $color-red;
+                    list-style-type: circle;
+
+                    span {
+                        color: #444;
+                    }
+                }
+
+            @include mq($until: tablet) {
+                &.col-4-12 {
+                    margin-bottom: 0;
+                }
+            }
+        }

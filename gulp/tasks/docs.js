@@ -11,9 +11,9 @@ gulp.task('docs', function () {
          .pipe(jsdoc.parser())
          .pipe(jsdoc.generator('docs', {
              path: 'ink-docstrap',
-             systemName      : 'Documentation',
+             systemName      : '',
              footer          : 'NSPCC',
-             copyright       : 'Copyright NSPCC',
+             copyright       : '',
              navType         : 'vertical',
              theme           : 'cerulean', // cerulean, cosmo, simplex, united
              linenums        : true,

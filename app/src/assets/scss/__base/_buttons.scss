@@ -14,5 +14,29 @@
 /* Buttons */
 
 .btn {
+    @include font(14, 18);
+    font-weight: bold;
+    background: $color-red;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    user-select: none;
+    border-radius: 2px;
 
+    &:hover {
+        .no-touch & {
+            background: darken($color-red, 10%);
+            color: #fff;
+        }
+    }
+
+    &.btn--disabled {
+        cursor: default;
+        background: lighten($color-red, 20%);
+
+        .no-touch & {
+            background: lighten($color-red, 20%);
+        }
+    }
 }

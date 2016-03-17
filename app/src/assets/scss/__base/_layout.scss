@@ -40,9 +40,9 @@ $mq-breakpoints: (
 
 @include rg-create-grid(
     $grid-class: "grid",
-    $width: 1024px,
-    $gutter: 32px,
-    $margin: 16px,
+    $width: 1280px,
+    $gutter: 20px,
+    $margin: 20px,
     $columns: 12,
     $breakpoint: "tablet"
 );

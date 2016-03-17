@@ -43,33 +43,48 @@ h1 {
     font-weight: 300;
 }
 
-h2,
-h3 {
-    @include font(22, 26, $font-primary);
+h2 {
+    @include font(26, 30, $font-primary);
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     @include mq($from: tablet) {
-        @include font(24, 28);
-        margin-bottom: 25px;
+        @include font(28, 32);
+        margin-bottom: 40px;
     }
 
     @include mq($from: smalldesktop) {
+        @include font(32, 36);
+        margin-bottom: 60px;
+    }
+}
+
+h3 {
+    @include font(24, 30, $font-primary);
+    font-weight: 300;
+    margin-bottom: 10px;
+
+    @include mq($from: tablet) {
         @include font(26, 30);
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+    }
+
+    @include mq($from: smalldesktop) {
+        @include font(32, 36);
+        margin-bottom: 20px;
     }
 }
 
 p,
 li {
-	@include font(14, 18, $font-primary);
+    @include font(18, 28);
 
     @include mq($from: tablet) {
-        @include font(15, 19);
+       @include font(19, 32);
     }
 
     @include mq($from: smalldesktop) {
-        @include font(16, 20);
+        @include font(20, 38);
     }
 }
 

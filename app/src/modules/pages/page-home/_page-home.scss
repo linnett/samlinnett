@@ -13,10 +13,10 @@
 
 .page-home {
     > section.section--trans {
-        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        transition: opacity 0.8s ease-out, transform 0.7s ease-out;
         opacity: 0;
-        transform: translate(0, 50px);
-        transform: translate3d(0, 50px, 0);
+        transform: translate(0, 100px);
+        transform: translate3d(0, 100px, 0);
 
         &.active {
             transform: translate(0, 0);
@@ -128,20 +128,6 @@
                 }
             }
         }
-
-    .page-home__skills {
-        p {
-            @include font(18, 28);
-
-            @include mq($from: tablet) {
-               @include font(19, 32);
-            }
-
-            @include mq($from: smalldesktop) {
-                @include font(20, 38);
-            }
-        }
-    }
 
     .page-home__companies {
 
