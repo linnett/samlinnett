@@ -3,7 +3,4 @@ import ReactDOM from 'react-dom';
 
 import { App } from './App';
 
-ReactDOM.render(
-  <App userName="Legend" lang="TypeScript" />,
-  document.getElementById("output")
-);
+ReactDOM.render(<App userName="Legend" lang="TypeScript" />, document.getElementById('output'));
