@@ -14,10 +14,11 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@assets': path.resolve(__dirname, 'src/assets'),
-      '@components': path.resolve(__dirname, 'src/components')
+      '@assets': path.resolve(__dirname, 'src', 'assets'),
+      '@components': path.resolve(__dirname, 'src', 'components')
     },
-    extensions: ['.css', '.js', '.jsx', '.json', '.ts', '.tsx']
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+    modules: ['node_modules']
   },
   module: {
     rules: [
