@@ -1,0 +1,12 @@
+/* Libs */
+@import './libs/normalize.css';
+
+/* Shared */
+@import './shared/base.css';
+@import './shared/grid.css';
+@import './shared/colours.css';
+
+/* Components */
+@import '../../App.css';
+@import '../../components/Header/Header.css';
+@import '../../components/Hero/Hero.css';

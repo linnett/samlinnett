@@ -1,0 +1,16 @@
+.Header {
+  background: #FFF;
+  border-bottom: 1px solid #333;
+  padding: 10px;
+  position: relative;
+  top: 0;
+  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.5s ease-in-out, background 0.3s cubic-bezier(0.68, 0, 0.38, 1);
+  width: 100%;
+
+  &--transparent {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+  }
+}

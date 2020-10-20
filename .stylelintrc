@@ -1,0 +1,12 @@
+
+{
+  "extends": "stylelint-config-standard",
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "single",
+    "order/properties-alphabetical-order": true,
+    "color-hex-case": "upper",
+    "max-empty-lines": 2
+  }
+}
