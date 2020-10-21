@@ -2,6 +2,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const postcssCustomMedia = require('postcss-custom-media');
 /* eslint-enable */
 
 module.exports = {
@@ -43,10 +44,17 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: { importLoaders: 1 }
+            options: {
+              importLoaders: 1
+            }
           },
           {
-            loader: 'postcss-loader'
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [[postcssCustomMedia()]]
+              }
+            }
           }
         ]
       },
@@ -59,22 +67,14 @@ module.exports = {
           }
         }
       }
-      // {
-      //   test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-      //   use: {
-      //     loader: 'url-loader',
-      //     options: {
-      //       limit: 50000,
-      //       mimetype: 'application/font-woff',
-      //       name: './fonts/[name].[ext]'
-      //     }
-      //   }
-      // }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html')
+      template: path.resolve(__dirname, 'src', 'index.html'),
+      minify: {
+        collapseWhitespace: true
+      }
     }),
     new MiniCssExtractPlugin({
       filename: './src/assets/css/style.css'

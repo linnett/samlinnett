@@ -13,4 +13,16 @@
     background: rgba(0, 0, 0, 0.4);
     position: fixed;
   }
+
+  &__imageWrap {
+    width: 60px;
+
+    @media (--tablet-viewport) {
+      width: 80px;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  }
 }

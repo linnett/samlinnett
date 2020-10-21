@@ -7,6 +7,27 @@
     "string-quotes": "single",
     "order/properties-alphabetical-order": true,
     "color-hex-case": "upper",
-    "max-empty-lines": 2
+    "max-empty-lines": 2,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "else",
+          "each",
+          "@each",
+          "custom-media",
+          "@custom-media",
+          "extends",
+          "include",
+          "@include",
+          "mixin",
+          "if",
+          "content",
+          "function",
+          "return",
+          "define-mixin"
+        ]
+      }
+    ]
   }
 }

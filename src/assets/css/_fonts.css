@@ -1,0 +1,119 @@
+$font-primary: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  color: #444;
+  font-family: $font-primary;
+  font-weight: 300;
+}
+
+/**
+ * h1 styles
+ */
+h1 {
+  @include font(34, 38, $font-primary);
+
+  font-weight: 300;
+}
+
+h2 {
+  @include font(26, 30, $font-primary);
+
+  font-weight: 300;
+  margin-bottom: 30px;
+
+  @include mq($from: tablet) {
+    @include font(28, 32);
+
+    margin-bottom: 40px;
+  }
+
+  @include mq($from: smalldesktop) {
+    @include font(32, 36);
+
+    margin-bottom: 60px;
+  }
+}
+
+h3 {
+  @include font(24, 30, $font-primary);
+
+  font-weight: 300;
+  margin-bottom: 10px;
+
+  @include mq($from: tablet) {
+    @include font(26, 30);
+
+    margin-bottom: 15px;
+  }
+
+  @include mq($from: smalldesktop) {
+    @include font(32, 36);
+
+    margin-bottom: 20px;
+  }
+}
+
+p,
+li {
+  @include font(18, 28);
+
+  @include mq($from: tablet) {
+    @include font(19, 32);
+  }
+
+  @include mq($from: smalldesktop) {
+    @include font(20, 38);
+  }
+}
+
+a {
+  @include font(14, 18, $font-primary);
+
+  color: $color-blue;
+  text-decoration: none;
+  transition: background 0.3s ease-out, color 0.3s ease-out;
+
+  svg {
+    transition: fill 0.3s ease-out;
+  }
+
+  &:hover {
+    .no-touch & {
+      color: $color-red;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+span {
+  transition: font 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+span,
+input,
+label,
+time,
+button,
+address {
+  -webkit-font-smoothing: antialiased;
+}

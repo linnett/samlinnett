@@ -1,0 +1,13 @@
+:root {
+  --mobile: 320px;
+  --tablet: 481px;
+  --smalldesktop: 768px;
+  --desktop: 1024px;
+  --largedesktop: 1280px;
+}
+
+@custom-media --mobile-viewport (min-width: 320px);
+@custom-media --tablet-viewport (min-width: 481px);
+@custom-media --smalldesktop-viewport (min-width: 768px);
+@custom-media --desktop-viewport (min-width: 1024px);
+@custom-media --largedesktop-viewport (min-width: 1280px);
