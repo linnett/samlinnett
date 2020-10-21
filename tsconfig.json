@@ -11,12 +11,13 @@
     "sourceMap": true,
     "target": "es6",
     "baseUrl": "./",
+    "typeRoots" : ["node_modules/@types", "src/types"],
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"]
     }
   },
   "include": [
-    "src/index.tsx"
+    "src/**/*"
   ]
 }

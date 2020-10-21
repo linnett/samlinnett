@@ -17,7 +17,7 @@ module.exports = {
       '@assets': path.resolve(__dirname, 'src', 'assets'),
       '@components': path.resolve(__dirname, 'src', 'components')
     },
-    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.jpg'],
     modules: ['node_modules']
   },
   module: {
@@ -49,7 +49,27 @@ module.exports = {
             loader: 'postcss-loader'
           }
         ]
+      },
+      {
+        test: /\.(jpg|jpeg|png)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: false
+          }
+        }
       }
+      // {
+      //   test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: 50000,
+      //       mimetype: 'application/font-woff',
+      //       name: './fonts/[name].[ext]'
+      //     }
+      //   }
+      // }
     ]
   },
   plugins: [
