@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssCustomMedia = require('postcss-custom-media');
+const pxtorem = require('postcss-pxtorem');
 /* eslint-enable */
 
 module.exports = {
@@ -52,14 +53,27 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [[postcssCustomMedia()]]
+                plugins: [
+                  postcssCustomMedia(),
+                  pxtorem({
+                    rootValue: 10,
+                    propList: ['font', 'font-size', 'line-height', 'letter-spacing'],
+                    replace: true,
+                    mediaQuery: false,
+                    minPixelValue: 0
+                  })
+                ]
               }
             }
           }
         ]
       },
       {
-        test: /\.(jpg|jpeg|png)$/,
+        test: /\.svg$/,
+        use: ['@svgr/webpack']
+      },
+      {
+        test: /\.(jpg|jpeg|png|svg)$/,
         use: {
           loader: 'url-loader',
           options: {

@@ -1,0 +1,20 @@
+.PageHomeIntro {
+  text-align: center;
+
+  &__social {
+    .grid {
+      max-width: 250px;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    grid-row: 1;
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

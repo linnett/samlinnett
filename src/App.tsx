@@ -1,13 +1,7 @@
 import React from 'react';
 
-import Header from '@components/Header/Header';
-import Hero from '@components/Hero/Hero';
+import PageHome from './pages/PageHome';
 
-const App: React.FC = () => (
-  <>
-    <Header />
-    <Hero />
-  </>
-);
+const App: React.FC = () => <PageHome />;
 
 export default App;

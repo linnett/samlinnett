@@ -5,11 +5,9 @@
 @import './_base.css';
 @import './_breakpoints.css';
 @import './_grid.css';
-@import './_fonts.css';
 @import './_colours.css';
 @import './_button.css';
+@import './_fonts.css';
 
 /* Components */
 @import '../../App.css';
-@import '../../components/Header/Header.css';
-@import '../../components/Hero/Hero.css';

@@ -15,6 +15,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@svgr/webpack": "^5.4.0",
+    "@types/classnames": "^2.2.10",
     "@types/node": "^14.11.10",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
@@ -38,6 +40,7 @@
     "postcss-loader": "^4.0.4",
     "postcss-nested": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "^5.1.1",
     "prettier": "^2.1.2",
     "source-map-loader": "^1.1.1",
     "stylelint": "^13.7.2",
@@ -52,6 +55,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   }

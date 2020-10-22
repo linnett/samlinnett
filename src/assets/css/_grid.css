@@ -1,11 +1,13 @@
 .grid {
   display: grid;
+  justify-items: center;
   margin: 0 auto;
   max-width: 980px;
 
+  /* TODO: Apply generic padding */
+
   &.no-cols {
     align-content: center;
-    grid-column-gap: 0;
     grid-row-gap: 0;
     grid-template-columns: 1fr;
     justify-content: center;

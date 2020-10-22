@@ -1,0 +1,13 @@
+.PageHome {
+  > section {
+    padding: 30px 0;
+
+    @media (--tablet-viewport) {
+      padding: 40px 0;
+    }
+
+    @media (--smalldesktop-viewport) {
+      padding: 60px 0;
+    }
+  }
+}
