@@ -1,9 +1,30 @@
 .PageHomeIntro {
   text-align: center;
 
+  &__social,
+  &__intro {
+    padding: 10px 0;
+
+    @media (--tablet-viewport) {
+      padding: 15px 0;
+    }
+
+    @media (--smalldesktop-viewport) {
+      padding: 20px 0;
+    }
+  }
+
   &__social {
     .grid {
       max-width: 250px;
+
+      @media (--tablet-viewport) {
+        max-width: 350px;
+      }
+
+      @media (--smalldesktop-viewport) {
+        max-width: 400px;
+      }
     }
   }
 
@@ -13,8 +34,47 @@
     grid-row: 1;
 
     svg {
+      fill: #333;
       height: 30px;
       width: 30px;
+
+      @media (--tablet-viewport) {
+        height: 40px;
+        width: 40px;
+      }
+
+      @media (--smalldesktop-viewport) {
+        height: 50px;
+        width: 50px;
+      }
     }
+
+    &--email:hover {
+      svg {
+        fill: var(--color-red);
+      }
+    }
+
+    &--github:hover {
+      svg {
+        fill: #6B6B6B;
+      }
+    }
+
+    &--linkedin:hover {
+      svg {
+        fill: var(--color-social-linkedin);
+      }
+    }
+
+    &--twitter:hover {
+      svg {
+        fill: var(--color-social-twitter);
+      }
+    }
+  }
+
+  &__intro {
+
   }
 }

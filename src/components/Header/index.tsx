@@ -14,7 +14,7 @@ const Header: React.FC<{
       'Header--sticky': isSticky
     })}
   >
-    <div className="Header__imageWrap grid no-cols">
+    <div className="Header__imageWrap">
       <img src={headerImage} alt="Sam" />
     </div>
   </header>

@@ -3,8 +3,15 @@
   justify-items: center;
   margin: 0 auto;
   max-width: 980px;
+  padding: 0 20px;
 
-  /* TODO: Apply generic padding */
+  @media (--tablet-viewport) {
+    padding: 0 25px;
+  }
+
+  @media (--smalldesktop-viewport) {
+    padding: 0 30px;
+  }
 
   &.no-cols {
     align-content: center;
