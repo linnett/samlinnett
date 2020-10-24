@@ -2,6 +2,7 @@
 {
   "extends": "stylelint-config-standard",
   "plugins": ["stylelint-order"],
+  "ignoreFiles": ['./node_modules/**/*.css'],
   "rules": {
     "indentation": 2,
     "string-quotes": "single",

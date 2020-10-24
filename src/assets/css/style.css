@@ -8,6 +8,3 @@
 @import './_colours.css';
 @import './_button.css';
 @import './_fonts.css';
-
-/* Components */
-@import '../../App.css';

@@ -57,6 +57,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.14.0",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.14.0"
   }
 }

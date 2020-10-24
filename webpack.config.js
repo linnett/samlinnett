@@ -35,7 +35,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -54,7 +53,9 @@ module.exports = {
             options: {
               postcssOptions: {
                 plugins: [
-                  postcssCustomMedia(),
+                  postcssCustomMedia({
+                    importFrom: __dirname + '/src/assets/css/_breakpoints.css'
+                  }),
                   pxtorem({
                     rootValue: 10,
                     propList: ['font', 'font-size', 'line-height', 'letter-spacing'],

@@ -6,3 +6,6 @@ declare module '*.jpeg';
 declare module '*.webp';
 declare module '*.css';
 declare module '*.scss';
+
+// Libs
+declare module 'react-awesome-slider/dist/autoplay';

@@ -1,5 +1,41 @@
 .Hero {
+  align-items: center;
   background: #444;
-  height: 100vh;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  transition: height 0.3s ease-out;
   width: 100vw;
+
+  @media (--smalldesktop-viewport) {
+    height: 100vh;
+  }
+
+  &__logo {
+    max-width: 480px;
+    opacity: 0.2;
+    transform: rotate(-10deg);
+    width: 75%;
+    z-index: 20;
+  }
+
+  &::after {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.aws-btn {
+  --loader-bar-color: transparent !important;
+  --loader-bar-height: 0 !important;
 }
