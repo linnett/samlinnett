@@ -5,6 +5,7 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/custom-animations/fold-out-animation.css';
 import 'react-awesome-slider/dist/styles.css';
 
+import { ReactComponent as DownArrow } from '@assets/img/svg/icon-arrow-up.svg';
 import imageOne from '@assets/img/hero/1.jpg';
 import imageTwo from '@assets/img/hero/2.jpg';
 import imageThree from '@assets/img/hero/3.jpg';
@@ -33,7 +34,12 @@ const Hero: React.FC = () => (
       <div data-src={imageThree} />
       <div data-src={imageFour} />
     </AutoplaySlider>
+
     <img src={logo} className="Hero__logo" alt="Logo" />
+
+    <div className="Hero__down-arrow">
+      <DownArrow />
+    </div>
   </section>
 );
 

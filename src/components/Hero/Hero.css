@@ -21,6 +21,20 @@
     z-index: 20;
   }
 
+  &__down-arrow {
+    bottom: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    z-index: 20;
+
+    svg {
+      animation: up-and-down 3s ease-out infinite;
+      fill: #FFF;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
   &::after {
     background: rgba(0, 0, 0, 0.5);
     bottom: 0;
