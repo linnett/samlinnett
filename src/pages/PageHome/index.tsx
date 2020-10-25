@@ -9,6 +9,7 @@ import PageHomeIntro from './PageHomeIntro';
 
 const PageHome: React.FC = () => {
   const [scrollTop, setScrollTop] = useState(0);
+  const [loadedAnim, setLoadedAnim] = useState(false);
 
   useEffect(() => {
     function onScroll() {
@@ -16,6 +17,10 @@ const PageHome: React.FC = () => {
 
       setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
     }
+
+    setTimeout(() => {
+      setLoadedAnim(true);
+    }, 800);
 
     window.addEventListener('scroll', onScroll);
 
@@ -26,8 +31,8 @@ const PageHome: React.FC = () => {
 
   return (
     <main className="PageHome">
-      <Header isSticky={isHeaderSticky} />
-      <Hero />
+      <Header isSticky={isHeaderSticky} isHeaderVisible={loadedAnim} />
+      <Hero isLogoVisible={loadedAnim} />
       <PageHomeIntro />
       <Footer />
     </main>

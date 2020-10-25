@@ -17,8 +17,13 @@
     max-width: 480px;
     opacity: 0.2;
     transform: rotate(-10deg);
+    transition: opacity 0.8s ease-in-out;
     width: 75%;
     z-index: 20;
+
+    &--loading {
+      opacity: 0;
+    }
   }
 
   &__down-arrow {

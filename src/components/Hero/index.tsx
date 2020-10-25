@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
@@ -26,7 +27,7 @@ const sliderProps = {
   animation: 'foldOutAnimation'
 };
 
-const Hero: React.FC = () => (
+const Hero: React.FC<{ isLogoVisible: boolean }> = ({ isLogoVisible }) => (
   <section className="Hero">
     <AutoplaySlider {...sliderProps}>
       <div data-src={imageOne} />
@@ -35,7 +36,14 @@ const Hero: React.FC = () => (
       <div data-src={imageFour} />
     </AutoplaySlider>
 
-    <img src={logo} className="Hero__logo" alt="Logo" />
+    <img
+      src={logo}
+      alt="Logo"
+      className={cx({
+        Hero__logo: true,
+        'Hero__logo--loading': !isLogoVisible
+      })}
+    />
 
     <div className="Hero__down-arrow">
       <DownArrow />
