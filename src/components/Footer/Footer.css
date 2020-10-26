@@ -1,0 +1,93 @@
+.Footer {
+  background: #333;
+  color: #FFF;
+  padding: 20px 0 0;
+
+  .grid {
+    @media (--smalldesktop-viewport) {
+      justify-items: flex-end;
+    }
+  }
+
+  &__main {
+    margin-bottom: 20px;
+  }
+
+  &__contact {
+    text-align: center;
+
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 20px;
+
+      @media (--smalldesktop-viewport) {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+    }
+
+    a {
+      background: #FFF;
+      border-radius: 50%;
+      display: inline-block;
+      height: 40px;
+      margin: 0 4px;
+      padding: 10px;
+      vertical-align: middle;
+      width: 40px;
+    }
+  }
+
+  &__icon {
+    svg {
+      display: inline-block;
+      fill: #444;
+      height: 20px;
+      vertical-align: middle;
+      width: 20px;
+    }
+
+    &--email:hover {
+      svg {
+        fill: var(--color-red);
+      }
+    }
+
+    &--github:hover {
+      svg {
+        fill: #6B6B6B;
+      }
+    }
+
+    &--linkedin:hover {
+      svg {
+        fill: var(--color-social-linkedin);
+      }
+    }
+
+    &--twitter:hover {
+      svg {
+        fill: var(--color-social-twitter);
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 5px 0;
+    text-align: right;
+    width: 100%;
+
+    p {
+      font-size: 9px;
+      line-height: 13px;
+
+      @media (--smalldesktop-viewport) {
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+

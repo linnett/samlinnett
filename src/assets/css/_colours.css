@@ -1,0 +1,24 @@
+/**
+ * Primary Colours
+ *
+ * Colour names: http://chir.ag/projects/name-that-color/
+ */
+
+:root {
+  --color-blue: #005CB9;
+  --color-red: #C33030;
+  --color-mine-shaft: #333;
+  --color-dove-gray: #666;
+  --color-spring-wood: #F7F3EF;
+  --color-hint-of-red: #F7F5F5;
+  --color-bondi-blue: #059CAF;
+  --color-social-twitter: #00ACED;
+  --color-social-linkedin: #007BB6;
+  --color-social-instagram: #517FA4;
+  --color-social-google: #DD4B39;
+  --color-social-youtube: #B00;
+}
+
+.color-text--red {
+  color: var(--color-red);
+}

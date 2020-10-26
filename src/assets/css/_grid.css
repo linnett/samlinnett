@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 20px;
+
+  @media (--tablet-viewport) {
+    padding: 0 25px;
+  }
+
+  @media (--smalldesktop-viewport) {
+    padding: 0 30px;
+  }
+
+  &.no-cols {
+    align-content: center;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}

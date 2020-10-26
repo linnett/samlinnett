@@ -1,0 +1,42 @@
+/* Resets */
+p,
+pre,
+blockquote,
+a,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+fieldset,
+form,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+  max-width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
