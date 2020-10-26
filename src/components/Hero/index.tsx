@@ -27,7 +27,7 @@ const sliderProps = {
   animation: 'foldOutAnimation'
 };
 
-const Hero: React.FC<{ isLogoVisible: boolean }> = ({ isLogoVisible }) => (
+const Hero: React.FC<{ hasLoaded: boolean }> = ({ hasLoaded }) => (
   <section className="Hero">
     <AutoplaySlider {...sliderProps}>
       <div data-src={imageOne} />
@@ -41,11 +41,16 @@ const Hero: React.FC<{ isLogoVisible: boolean }> = ({ isLogoVisible }) => (
       alt="Logo"
       className={cx({
         Hero__logo: true,
-        'Hero__logo--loading': !isLogoVisible
+        'Hero__logo--loading': !hasLoaded
       })}
     />
 
-    <div className="Hero__down-arrow">
+    <div
+      className={cx({
+        'Hero__down-arrow': true,
+        'Hero__down-arrow--loading': !hasLoaded
+      })}
+    >
       <DownArrow />
     </div>
   </section>

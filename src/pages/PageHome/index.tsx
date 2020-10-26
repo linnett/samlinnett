@@ -31,8 +31,8 @@ const PageHome: React.FC = () => {
 
   return (
     <main className="PageHome">
-      <Header isSticky={isHeaderSticky} isHeaderVisible={loadedAnim} />
-      <Hero isLogoVisible={loadedAnim} />
+      <Header isSticky={isHeaderSticky} hasLoaded={loadedAnim} />
+      <Hero hasLoaded={loadedAnim} />
       <PageHomeIntro />
       <Footer />
     </main>

@@ -1,5 +1,10 @@
 .PageHomeIntro {
+  background: #FFF;
   text-align: center;
+
+  > div:last-child {
+    padding-bottom: 0;
+  }
 
   &__social,
   &__intro {

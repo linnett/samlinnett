@@ -6,14 +6,14 @@ import './Header.css';
 
 const Header: React.FC<{
   isSticky: boolean;
-  isHeaderVisible: boolean;
-}> = ({ isSticky, isHeaderVisible }) => (
+  hasLoaded: boolean;
+}> = ({ isSticky, hasLoaded }) => (
   <header
     className={cx({
       Header: true,
       'Header--transparent': !isSticky,
       'Header--sticky': isSticky,
-      'Header--loading': !isHeaderVisible
+      'Header--loading': !hasLoaded
     })}
   >
     <div className="Header__imageWrap">

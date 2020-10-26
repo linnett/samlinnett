@@ -1,4 +1,8 @@
 .PageHome {
+  @media (--tablet-viewport) {
+    padding-top: 100vh;
+  }
+
   > section {
     padding: 30px 0;
 

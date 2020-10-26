@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssCustomMedia = require('postcss-custom-media');
 const pxtorem = require('postcss-pxtorem');
+const CopyPlugin = require('copy-webpack-plugin');
 /* eslint-enable */
 
 module.exports = {
@@ -39,7 +40,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: __dirname + '/src/assets/css/style.css'
+              publicPath: __dirname + '/assets/css/style.css'
             }
           },
           {
@@ -92,7 +93,10 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: './src/assets/css/style.css'
+      filename: '[name].css'
+    }),
+    new CopyPlugin({
+      patterns: [{ from: './src/assets/img/favicon', to: 'assets/img/favicon' }]
     })
   ]
 };
