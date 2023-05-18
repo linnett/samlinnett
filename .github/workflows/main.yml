@@ -20,10 +20,23 @@ jobs:
           | jq -r '.body')
         echo "${RELEASE_NOTES}" > release_notes.txt
 
-    - name: Commit release notes
-      run: |
-        git config user.name "Automated Release Notes"
-        git config user.email "noreply@github.com"
-        git add release_notes.txt
-        git commit -m "Update release notes [skip ci]"
-        git push
+#     - name: Create and checkout new branch
+#       run: |
+#         git checkout -b release-notes
+#         git config user.name "Automated Release Notes"
+#         git config user.email "noreply@github.com"
+
+#     - name: Commit release notes
+#       run: |
+#         git add release_notes.txt
+#         git commit -m "Update release notes [skip ci]"
+#         git push origin release-notes
+
+#     - name: Checkout default branch
+#       run: git checkout ${GITHUB_REF#refs/heads/}
+
+#     - name: Merge release notes branch
+#       run: git merge --no-ff release-notes
+
+#     - name: Push changes
+#       run: git push origin ${GITHUB_REF#refs/heads/}
