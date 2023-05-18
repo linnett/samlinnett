@@ -2,7 +2,7 @@ name: Generate Release Notes
 
 on:
   release:
-    types: [published]
+    types: [published, updated]
 
 jobs:
   generate-release-notes:
